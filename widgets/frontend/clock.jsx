@@ -26,9 +26,11 @@ class Clock extends React.Component {
             <div className = "clock-index">
                 <h1>Real Time Clock</h1>   
                 <div className = "clock-time">
-                    Date: {(this.state.date).getMonth()} / {(this.state.date).getDate()} / {(this.state.date).getFullYear()}
+                    <span className='clock-label'>Date:</span>
+                    <span className='clock-content'>{(this.state.date).getMonth()} / {(this.state.date).getDate()} / {(this.state.date).getFullYear()}</span>
                     <br/>
-                    Time: {(this.state.date).getHours()} : {(this.state.date).getMinutes()} : {(this.state.date).getSeconds()}
+                    <span className='clock-label'>Time:</span>
+                    <span className='clock-content'>{(this.state.date).getHours()} : {(this.state.date).getMinutes()} : {(this.state.date).getSeconds()}</span>
                 </div>
             </div>
         )
