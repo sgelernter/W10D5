@@ -11,27 +11,29 @@ class Tabs extends React.Component {
         this.updateIndex = this.updateIndex.bind(this);
     }
 
-    updateIndex(){
-        debugger
-        this.setState({index: window.event.target.key});
-        console.log(this.state);
+    updateIndex(idx){
+        this.setState({index: idx});
     }
 
     render() {
+        const activeEntry = this.entries[this.state.index];
+        const header = this.entries.map((entry, idx) => {
+                return(
+                    <li key={idx} className='tab-list-item' >
+                        <h2 onClick={() => this.updateIndex(idx)} >
+                            {entry.title}
+                        </h2>
+                    </li>)
+                })
         return (
             <div>
-                <ul>
-                {this.entries.map((entry, idx) => {
-                    return(
-                        <li key={idx} className='tab-list-item'>
-                            <h1 onClick={this.updateIndex} key={idx}>
-                                {entry.title}
-                            </h1>
-                            <article>
-                                {entry.content}
-                            </article>   
-                        </li>)
-                    })}
+                <ul className='tabs-ul'>
+                    <div className='tabs-header'>
+                        {header}
+                    </div>
+                    <article> 
+                        {activeEntry.content}
+                    </article>
                 </ul>
             </div>
         )

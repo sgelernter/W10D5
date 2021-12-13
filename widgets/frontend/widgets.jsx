@@ -10,13 +10,11 @@ const Root = (props) => {
         <Clock />
         <Tabs array = {props.tabsArray}/>
     </div>
-            
-
     )
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const main = document.getElementById('main');
-
-    ReactDOM.render(<Root tabsArray = {[{title :'title1', content: 'content1'},{title :'title2', content: 'content2'}]} />, main);
+    const tabsArray = [{title :'title1', content: 'content1'},{title :'title2', content: 'content2'}, {title :'title3', content: 'content3'}, {title :'title4', content: 'content4'}];
+    ReactDOM.render(<Root tabsArray={tabsArray} />, main);
 })

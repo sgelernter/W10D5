@@ -23,12 +23,47 @@ body {
 }
 
 .clock-label {
-    display: inline-block;
+    display: block;
     float: left;
 }
 
 .clock-content {
     float: right;
+}
+
+.tabs-ul {
+    /* border: solid rgb(153, 68, 135) 2px; */
+    /* display: flex;  */
+}
+
+ul h2 {
+    margin: 0px;
+}
+
+.tabs-header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tabs-ul li:hover {
+    background-color: azure;
+}
+
+.tabs-ul li {
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px;
+    margin: 0px;
+    cursor: pointer;
+    border: solid rgb(153, 68, 135) 2px; 
+    border-top-left-radius: 20%; 
+    border-top-right-radius: 20%; 
+}
+
+.tabs-ul article {
+    float: bottom;
+    margin: 5px;
+    border: solid rgb(153, 68, 135) 2px;
 }
 
 
